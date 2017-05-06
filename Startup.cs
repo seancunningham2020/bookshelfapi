@@ -7,6 +7,9 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using Microsoft.EntityFrameworkCore;
+using bookshelfapi.Data;
+using bookshelfapi.Repositories;
 
 namespace bookshelfapi
 {
@@ -27,8 +30,13 @@ namespace bookshelfapi
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddDbContext<ApiDataContext>(opt => opt.UseInMemoryDatabase());
+            
             // Add framework services.
             services.AddMvc();
+
+            // Register repositories
+            services.AddTransient<IAuthorsRepository, AuthorsRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -36,6 +44,11 @@ namespace bookshelfapi
         {
             loggerFactory.AddConsole(Configuration.GetSection("Logging"));
             loggerFactory.AddDebug();
+
+            // Add seed data
+            var context = app.ApplicationServices.GetService<ApiDataContext>();
+            var seedData = new SeedData();
+            seedData.AddSeedData(context);
 
             app.UseMvc();
         }

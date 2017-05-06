@@ -1,0 +1,8 @@
+e:\projects\github\bookshelfapi\bin\Debug\netcoreapp1.1\bookshelfapi.deps.json
+e:\projects\github\bookshelfapi\bin\Debug\netcoreapp1.1\bookshelfapi.runtimeconfig.json
+e:\projects\github\bookshelfapi\bin\Debug\netcoreapp1.1\bookshelfapi.runtimeconfig.dev.json
+e:\projects\github\bookshelfapi\bin\Debug\netcoreapp1.1\bookshelfapi.dll
+e:\projects\github\bookshelfapi\bin\Debug\netcoreapp1.1\bookshelfapi.pdb
+e:\projects\github\bookshelfapi\obj\Debug\netcoreapp1.1\bookshelfapi.AssemblyInfo.cs
+e:\projects\github\bookshelfapi\obj\Debug\netcoreapp1.1\bookshelfapi.dll
+e:\projects\github\bookshelfapi\obj\Debug\netcoreapp1.1\bookshelfapi.pdb

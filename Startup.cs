@@ -37,6 +37,7 @@ namespace bookshelfapi
 
             // Register repositories
             services.AddTransient<IAuthorsRepository, AuthorsRepository>();
+            services.AddTransient<IBooksRepository, BooksRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

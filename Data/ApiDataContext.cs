@@ -11,5 +11,7 @@ namespace bookshelfapi.Data
         }
         
         public DbSet<DbAuthor> Authors { get; set; }
+
+        public DbSet<DbBook> Books { get; set; }
     }
 }
